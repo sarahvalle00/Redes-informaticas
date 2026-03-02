@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes PAN y LAN</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #ff9800;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e68900;
+        }
+        .info {
+            display: none;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Redes PAN y LAN</h1>
+    <p>Conoce qué son y cómo se utilizan en la vida diaria</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>¿Qué es una Red PAN?</h2>
+        <p>Una Red de Área Personal (PAN) conecta dispositivos personales a corta distancia.</p>
+        <button onclick="toggleInfo('pan')">Ver más</button>
+        <div class="info" id="pan">
+            <p>Las redes PAN permiten la conexión de dispositivos como teléfonos, laptops, relojes inteligentes y audífonos mediante tecnologías como Bluetooth o USB.</p>
+            <p><strong>¿Cómo se utilizan?</strong><br>
+            Se usan para transferir archivos entre dispositivos, conectar accesorios inalámbricos o compartir internet desde un celular.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es una Red LAN?</h2>
+        <p>Una Red de Área Local (LAN) conecta dispositivos dentro de un área limitada como una casa o escuela.</p>
+        <button onclick="toggleInfo('lan')">Ver más</button>
+        <div class="info" id="lan">
+            <p>Las redes LAN permiten compartir recursos como impresoras, archivos y conexión a internet dentro de un mismo edificio.</p>
+            <p><strong>¿Cómo se utilizan?</strong><br>
+            Se utilizan en hogares, oficinas y centros educativos para conectar computadoras mediante cables internet o WiFi.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    </footer>
+
+<script>
+    function toggleInfo(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "block") {
+            element.style.display = "none";
+        } else {
+            element.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
